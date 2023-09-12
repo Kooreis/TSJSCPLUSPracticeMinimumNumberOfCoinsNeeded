@@ -1,4 +1,5 @@
-function minCoins(coins, m, V) {
-    if (V == 0) return 0;
-    let res = Number.MAX_VALUE;
-}
+for (let i = 0; i < m; i++) {
+        if (coins[i] <= V) {
+            let sub_res = minCoins(coins, m, V - coins[i]);
+        }
+    }
