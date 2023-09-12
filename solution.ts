@@ -1,9 +1,10 @@
-class CoinChange {
-    private coins: number[];
-    private memo: Map<number, number>;
-
-    constructor(coins: number[]) {
-        this.coins = coins;
-        this.memo = new Map<number, number>();
-    }
-}
+public getMinCoins(amount: number): number {
+        if (amount < 0) {
+            return -1;
+        }
+        if (amount === 0) {
+            return 0;
+        }
+        if (this.memo.has(amount)) {
+            return this.memo.get(amount)!;
+        }
